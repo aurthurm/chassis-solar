@@ -34,7 +34,7 @@ SECRET_KEY = '$j=lyyotw0$o5thd%6a+-ce)*&mi3ch1_h%3d8dybp-&x29z_q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['amusendame.pythonanywhere.com/']
 
 
 # Application definition
