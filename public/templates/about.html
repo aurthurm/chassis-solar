@@ -1,0 +1,93 @@
+{% extends 'skeleton.html' %}
+{% load static %}
+
+
+{% block main %}
+
+    <div class="single-product-area pt-5 clearfix">
+        <div class="container-fluid"> 
+
+            <h4 class="text-center">{{ about.heading }}</h4>
+            <hr>
+            <div class="text-muted card-text">
+                {{ about.message }}
+            </div>
+
+            <section class="my-5 py-2">
+
+                <h4 class="mb-5"><span class="text-marked"> Our</span> Great Team</h4>
+                <div class="row">
+                    {% for person in about.team.all %}
+                        <div class="col-4">
+                            <img src="{{ person.image.url }}" alt="">
+                            <h4 class="h5 mt-3"><span class="text-marked">{{person.first_name}}</span> {{person.last_name}}</h4>
+                            <h5 class="h6">{{person.heading}}</h5>
+                            <div class="card-text border-top-marked mt-3 pt-1 text-muted">{{person.message}}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+            </section>
+
+            <section class=" my-5 py-5">
+
+                <h4 class="mb-0 pb-0"><span class="text-marked">Downloadable</span>  Media</h4>
+                <p class="text-muted mt-0 pt-0">More information can be otained from the following downloads</p>
+    
+                <div class="row">
+                    {% for download in about.downloads.all %}
+                        <div class="col-4">
+                            <h5 class="h6">Document:  <span class="text-marked">{{download.product_variant.name}}</span></h4>
+                            <h5 class="h6 mt-3 d-inline">Type: <span class="text-marked">{{download.content_type}}</span> </h5>
+                            <a class="btn btn-sm btn-outline-dark d-inline ml-3" href="{{download.content_file.url}}" _target="blank">Download</a>
+                        </div>
+                    {% endfor %}
+                </div>
+
+            </section>
+
+            <section class="section my-5 py-2">
+
+                <h4><span class="text-marked">Stay</span> in Touch</h4>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        {% for contact in about.contacts.all %}
+                            <h5><span class="text-marked">{{ contact.heading }}</span></h5> 
+                            <div class="card-text border-top-marked mb-3 mt-1 text-muted">
+                               {{ contact.message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="col">
+                        {% for t_member in about.team.all %}
+                            {% if t_member.mobile %}
+                                <h5 class="d-inline"><span class="text-marked">{{ t_member.first_name }}</span></h5> 
+                                <span class="ml-3">{{ t_member.mobile }}</span> 
+                                <br>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="col">
+                        {% for ref in about.other_refs.all %}
+                            <div class="card-text">
+                                <span class="text-marked">{{ ref.heading }}</span> {{ ref.message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+            </section>
+
+
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+
+</script>
+{% endblock %}

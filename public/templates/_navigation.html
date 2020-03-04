@@ -1,0 +1,68 @@
+{% load static %}
+{% load social_medias_injector %}
+
+<!-- Mobile Nav (max width 767px)-->
+<div class="mobile-nav">
+    <!-- Navbar Brand -->
+    <div class="amado-navbar-brand">
+        <a href="{% url 'shop:home' %}"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+    </div>
+    <!-- Navbar Toggler -->
+    <div class="amado-navbar-toggler">
+        <span></span><span></span><span></span>
+    </div>
+</div>
+
+<!-- Header Area Start -->
+<header class="header-area clearfix">
+    <!-- Close Icon -->
+    <div class="nav-close">
+        <i class="fa fa-close" aria-hidden="true"></i>
+    </div>
+    <!-- Logo -->
+    <div class="logo">
+        <a href="{% url 'shop:home' %}"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+    </div>
+    <!-- Amado Nav -->
+    <nav class="amado-nav">
+        <ul>
+            <li class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}"><a href="{% url 'shop:home' %}">Home</a></li>
+            <li class="{% if request.resolver_match.url_name == 'store' %}active{% endif %}"><a href="{% url 'shop:store' %}?category=&brand=">Shop</a></li>
+            <li class="{% if request.resolver_match.url_name == 'about-us' %}active{% endif %}"><a href="{% url 'info:about-us' %}">About</a></li>
+        </ul>
+    </nav>
+    <!-- Button Group -->
+    <div class="amado-btn-group mt-30 mb-100">
+        <a href="#" class="btn amado-btn mb-15 btn-lemon">%Discount%</a>
+        <a href="#" class="btn amado-btn active">New this week</a>
+    </div>
+    <!-- Cart Menu -->
+    <div class="cart-fav-search mb-100">
+        <!-- <a href="cart.html" class="cart-nav"><img src="{% static 'img/core-img/cart.png' %}" alt=""> Cart <span>(0)</span></a> -->
+        <!-- <a href="#" class="fav-nav"><img src="{% static 'img/core-img/favorites.png' %}" alt=""> Favourite</a> -->
+        <!-- <a href="#" class="search-nav"><img src="{% static 'img/core-img/search.png' %}" alt=""> Search</a> -->
+    </div>
+
+    <!-- Social Button -->
+    {% get_handle social_media="facebook" as facebook %}
+    {% get_handle social_media="twitter" as twitter %}
+    {% get_handle social_media="instagram" as instagram %}
+    {% get_handle social_media="pinterest" as pinterest %}
+    {% get_handle social_media="whatsapp" as whatsapp %}
+    <div class="social-info d-flex justify-content-between">
+        {% if pinterest %}
+        <a href="//pinterest.com/{{ pinterest }}"><i class="fa fa-pinterest" aria-hidden="true" target="_blank"></i></a>
+        {% endif %}
+        {% if instagram %}
+        <a href="//instagram.com/{{ instagram }}"><i class="fa fa-instagram" aria-hidden="true" target="_blank"></i></a>
+        {% endif %}
+        {% if facebook %}
+        <a href="//facebook.com/{{ facebook }}"><i class="fa fa-facebook" aria-hidden="true" target="_blank"></i></a>
+        {% endif %}
+        {% if twitter %}
+        <a href="//twitter.com/{{ twitter }}"><i class="fa fa-twitter" aria-hidden="true" target="_blank"></i></a>
+        {% endif %}
+    </div>
+
+</header>
+<!-- Header Area End -->

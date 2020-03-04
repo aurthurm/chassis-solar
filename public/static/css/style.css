@@ -1,0 +1,79 @@
+    /* ####################################################
+    :: Template Name: Essence - Fashion Ecommerce Template
+    :: Author: Colorlib
+    :: Author URL: https://colorlib.com
+    :: Description: Essence is smart & elegant fashion e-commerce Template. It's suitable for all e-commerce business platform.
+    :: Version: 1.0.0
+    :: Created: April 27, 2018
+    :: Last Updated: May 2, 2018
+    #################################################### */
+
+    /* ---------------------------------------
+    ##### - PLACE YOUR CUSTOM CSS HERE - #####
+    --------------------------------------- */
+
+    .main-content-wrapper .header-area .logo {
+        margin-bottom: 50px;
+        display: block;
+    }
+
+    .widget .catagories-menu li a {
+        padding: 5px 0 5px 15px;
+        display: inline-block;
+    }
+
+    .widget.brands .form-check {
+        margin-bottom: 10px;
+    }
+
+ /* Color Overides to match chassis solar 
+    
+    Green:  RGB: 20, 156, 76   HEX: #179C49
+    Yellow: RGB: 231, 232, 31  HEX: #E7E81F
+    Lemon:  RGB: 151, 202, 61  HEX: #97CA3D
+    White:  RGB: 255, 255, 255 HEX: #FFFFFF
+
+ */
+
+#scrollUp,
+.btn-lemon,
+.single-products-catagory .hover-content .line,
+.main-content-wrapper .header-area .amado-nav li a::after,
+.single-product-wrapper .product-description .product-meta-data .line,
+.main-content-wrapper .single-product-area .single_product_desc .product-meta-data .line,
+.newsletter-area .newsletter-form form input[type="submit"]:hover, 
+.newsletter-area .newsletter-form form input[type="submit"]:focus,
+.newsletter-area .newsletter-form form input[type="submit"],
+.pagination .page-item .page-link:hover, 
+.pagination .page-item .page-link:focus  {
+    background-color: #97CA3D !important;
+}
+
+.widget .catagories-menu li a.active,
+.main-content-wrapper .header-area .amado-nav li a:hover,
+.widget .catagories-menu li a:hover, 
+.widget .catagories-menu li a:focus,
+.widget.brands .form-check label:hover,
+.single-product-wrapper .product-description .product-meta-data .product-price,
+.main-content-wrapper .single-product-area .single_product_desc .product-meta-data .product-price,
+.main-content-wrapper .header-area .social-info a:hover, .main-content-wrapper .header-area .social-info a:focus,
+.newsletter-area .newsletter-text h2 span,
+.footer_area .single_widget_area .footer_menu .navbar-nav .nav-item.active .nav-link,
+.footer_area .single_widget_area .footer_menu .navbar-nav .nav-item .nav-link:hover, 
+.footer_area .single_widget_area .footer_menu .navbar-nav .nav-item .nav-link:focus,
+span.text-marked {
+     color: #97CA3D !important;
+ }
+
+ .main-content-wrapper .single-product-area .single_product_thumb .carousel-indicators li.active {
+    border: 2px solid #97CA3D !important;
+}
+
+/* footer resize */
+.footer_area {
+    padding: 20px 0;
+}
+
+.border-top-marked {
+    border-top: 2px solid #97CA3D !important;;
+}
