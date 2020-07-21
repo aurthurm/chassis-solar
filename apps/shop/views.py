@@ -189,5 +189,3 @@ class VariantDetail(View):
         representation['images4'] = images[4] if len(images) > 4 else ''
         representation['images'] = images
         return JsonResponse(representation)
-
-        "background-image: url(" +  + ");"
